@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  nestjs-gateway:
+    image: node:20
+    volumes:
+      - .:/workspaces/PROYECTO-BASE-FASE1
+    working_dir: /workspaces/PROYECTO-BASE-FASE1/nestjs-gateway
+    command: tail -f /dev/null
+
+  fastapi-ml-api:
+    build: ./fastapi-ml-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fastapi-ml-api:/app
+    working_dir: /app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  nextjs-web-client:
+    image: node:20
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
+

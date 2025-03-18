@@ -1,0 +1,23 @@
+{
+  "name": "Arrienda ya",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "nestjs-gateway",
+  "workspaceFolder": "/workspaces/PROYECTO-BASE-FASE1",
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "bash /workspaces/PROYECTO-BASE-FASE1/.devcontainer/bootstrap.sh",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "ms-azuretools.vscode-docker",
+    "ms-python.python"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true,
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "remoteEnv": {
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

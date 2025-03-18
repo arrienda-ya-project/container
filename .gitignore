@@ -1,0 +1,49 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Next.js
+.next/
+out/
+
+# Vite
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+
+# Env
+.env
+.env.*
+
+# MacOS
+.DS_Store
+
+# Linux
+*.swp
+
+# IDEs
+.idea/
+*.iml
+
+# Coverage
+coverage/
+
+# Tailwind build artifacts (opcional)
+postcss.config.js
+tailwind.config.js
+
+# Others
+*.local
