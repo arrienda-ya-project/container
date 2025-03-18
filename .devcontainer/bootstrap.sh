@@ -4,7 +4,7 @@
 echo "Verificando y creando proyecto nestjs-gateway..."
 if [ ! -f "./nestjs-gateway/package.json" ]; then
   cd nestjs-gateway
-  npx @nestjs/cli new . --package-manager=npm --skip-git --skip-install
+  npx @nestjs/cli new . 
   echo "Proyecto nestjs-gateway creado."
 
   touch .gitignore
